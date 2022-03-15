@@ -25,7 +25,7 @@
 </p>
 
 <h2 align="center" id="sobre">Sobre</h2>
-<p align="justify">Uma aplicação web onde o usuário após logar com sua conta Google, ou criar uma conta com outro e-mail válido, terá a opção de criar um canal de conversas, ou mesmo de participar dos canais já exisntes, podendo assim ter uma ótima experiência em desenvolver seu Network.</p>
+<p align="justify">Uma aplicação web onde o usuário após logar com sua conta Google, ou criar uma conta com outro e-mail válido, terá a opção de criar um canal de conversas, ou mesmo de participar dos canais já existentes, podendo assim ter uma ótima experiência em desenvolver seu Network.</p>
 
 <h3 align="left" id="funcionalidades">Funcionalidades</h3>
 
