@@ -1,18 +1,24 @@
 import React, { useEffect } from 'react';
-import './App.css';
+
+import { GlobalStyle } from './styles/global';
+
+// Firebase
+import { auth } from '../src/server/firebase';
 
 // Redux e Dispatch
 import { useSelector, useDispatch } from 'react-redux';
-import { selectUser } from './features/userSlice';
+import { selectUser, login, logout } from '../src/features/userSlice';
 
-// Firebase
-import { auth } from './firebase';
-import { login, logout } from './features/userSlice';
+// Pages
+import { Login } from '../src/pages/Login';
+// import { AccountForm } from './pages/AccountForm';
 
 // Components
-import Login from './Login';
-import Sidebar from './Sidebar';
-import Chat from './Chat';
+import { Sidebar } from '../src/components/Sidebar';
+import { Chat } from '../src/components/Chat';
+
+
+import Routes from "./Routes";
 
 function App() {
 
@@ -43,7 +49,7 @@ function App() {
 
   return (
     <div className="app">
-
+      <GlobalStyle />
       {user ?
         (
           <>
@@ -52,10 +58,16 @@ function App() {
           </>
         )
         :
+        <Routes />
+        /*  
+        <AccountForm />
         <Login />
+        */
       }
     </div>
   );
 }
 
 export default App;
+
+

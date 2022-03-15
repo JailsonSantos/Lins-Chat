@@ -1,44 +1,81 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+## Para usar o projeto basta dar um gitclone no repositório;
 
-## Available Scripts
+### Instalar as dependencias rode um dos domandos abaixo:
+- yarn ou npm install
 
-In the project directory, you can run:
+#### Para rodar o projeto basta entrar no diretório do projeto e rodar um dos comandos abaixo:
+- yarn start ou npm start
 
-### `npm start`
+<h1 align="center">
+  <img alt="LinsChat" title="#LinsChat" src="./src/assets/lins-chat-light.svg" />
+</h1>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<p align="center">
+  Uma aplicação web responsivo para criação de salas de conversas e bate papo.
+</p>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+<h2 align="center">Tabela de Conteúdos</h2>
+<p align="center">
+  • <a href="#sobre">Sobre</a>
+  • <a href="#funcionalidades">Funcionalidades</a>
+  • <a href="#tecnologias">Tecnologias</a> 
+  • <a href="#status">Status do Projeto</a> 
+  • <a href="#autor">Autor</a>
+  • <a href="#licenca">Licença</a>
+</p>
 
-### `npm test`
+<h2 align="center" id="sobre">Sobre</h2>
+<p align="justify">Uma aplicação web onde o usuário após logar com sua conta Google, ou criar uma conta com outro e-mail válido, terá a opção de criar um canal de conversas, ou mesmo de participar dos canais já exisntes, podendo assim ter uma ótima experiência em desenvolver seu Network.</p>
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<h3 align="left" id="funcionalidades">Funcionalidades</h3>
 
-### `npm run build`
+- [x] Fazer login na conta Google;
+- [x] Cadastar usuário;
+- [x] Recuperar senha do usuário via e-mail;
+- [x] Criar um novo canal de conversa;
+- [x] Conversar com outros usuários em um canal já existente;
+- [x] Fazer logout;
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<h3 align="left" id="layout">Versao Web responsivo</h3>
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+<p align="center">
+  <img alt="LinsChatLogin" title="#LinsChatLogin" src="./src/assets/login.jpg" width="600px">
+  <img alt="LinsChatCadastro" title="#LinsChatCadastro" src="./src/assets/cadastro.jpg" width="600px">
+  <img alt="LinsChat" title="#LinsChat" src="./src/assets/chat.jpg" width="600px">
+</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<p align="center">
+  <img alt="LinsChatLoginMobile" title="#LinsChatLoginMobile" src="./src/assets/login-mobile.jpg" width="200px">
+  <img alt="LinsChatCadastroMobile" title="#LinsChatCadastroMobile" src="./src/assets/cadastro-mobile.jpg" width="200px">
+</p>
 
-### `npm run eject`
+<h3 align="left" id="tecnologias">🛠 Tecnologias</h3>
+<p align="justify">As seguintes Tecnologias e bibliotecas que foram usadas na construção do projeto</p>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- [Node.js](https://nodejs.org/en/)
+- [ReactJS](https://pt-br.reactjs.org/)
+- [Styled-components](https://styled-components.com/docs/basics)
+- [Redux](https://redux.js.org/)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [React Router](https://reactrouter.com/)
+- [Fire Base](https://console.firebase.google.com)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<h2 align="left" id="status">Status do Projeto</h2>
+<p align="left"> 🚧  ReactJS 🚀 Versão 1.0 em Concluída.  🚧.</p>
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<h2 align="left" id="autor">🦸 Autor</h2>
+<a href="https://github.com/JailsonSantos">
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/11697713?s=96&v=4" width="100px;" alt=""/>
+ <br />
+ <sub><b>Jailson Santos</b></sub></a> <a href="https://www.linkedin.com/in/jailson-santos-726395104/" title="Jailson Santos">🚀</a>
+ <br />
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+[![Linkedin Badge](https://img.shields.io/badge/-Jailson-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/jailson-santos-726395104/)](https://www.linkedin.com/in/jailson-santos-726395104/) 
+[![Gmail Badge](https://img.shields.io/badge/-jailson.ads007@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:jailson.ads007@gmail.com)](mailto:jailson.ads007@gmail.com)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<h2 align="left" id="licenca">📝 Licença</h2>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Este projeto esta sobe a licença [MIT](./LICENSE).
+
+Feito com ❤️ por Jailson Santos 👋🏽 [Entre em contato!](https://www.linkedin.com/in/jailson-santos-726395104/)

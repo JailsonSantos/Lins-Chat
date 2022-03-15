@@ -1,18 +1,26 @@
 import React, { useState, useEffect } from 'react'
-import './Chat.css'
+import {
+  Container,
+  ChatMessages,
+  ChatInput,
+  ChatInputIcons,
+  Form,
+  InputForm,
+  InputButton
+} from './styles.js'
 
 // Firebase
 import firebase from 'firebase';
-import db from './firebase';
+import db from '../../server/firebase';
 
 // Redux e Dispatch
 import { useSelector } from 'react-redux';
-import { selectUser } from './features/userSlice';
-import { selectChannelId, selectChannelName } from './features/appSlice';
+import { selectUser } from '../../features/userSlice'
+import { selectChannelId, selectChannelName } from '../../features/appSlice';
 
 // Components
-import ChatHeader from './ChatHeader'
-import Message from './Message'
+import { ChatHeader } from '../ChatHeader'
+import { Message } from '../Message';
 
 // Icons
 import CardGiftcardIcon from '@material-ui/icons/CardGiftcard'
@@ -20,7 +28,7 @@ import GifIcon from '@material-ui/icons/Gif'
 import EmojiEmotionsIcon from '@material-ui/icons/EmojiEmotions'
 import AddCircleIcon from '@material-ui/icons/AddCircle'
 
-function Chat() {
+export function Chat() {
   const user = useSelector(selectUser)
   const channelId = useSelector(selectChannelId)
   const channelName = useSelector(selectChannelName)
@@ -52,50 +60,47 @@ function Chat() {
   }
 
   return (
-    <div className="chat">
+    <Container>
       <ChatHeader channelName={channelName} />
 
       {/* PRECISA IMPLEMENTAR UMA SCROOLVIEW */}
-      <div className="chat__messages">
-        {messages?.map((message) => (
-          <Message
+      <ChatMessages className="chat__messages">
+        {messages?.map((message, index) => (
+          <Message key={index}
             timestamp={message.timestamp}
             message={message.message}
             user={message.user}
           />
 
         ))}
-      </div>
+      </ChatMessages>
 
-      <div className="chat__input">
+      <ChatInput>
         <AddCircleIcon fontSize="large" />
 
-        <form>
-          <input
+        <Form>
+          <InputForm
             value={inputMessage}
             disabled={!channelId}
             onChange={(e) => setInputMessage(e.target.value)}
             placeholder={`Message #${channelName}`}
 
           />
-          <button
+          <InputButton
             disabled={!channelId}
-            className="chat__inputButton"
             type="submit"
             onClick={sendMessage}
           >
             Send Message
-          </button>
-        </form>
+          </InputButton>
+        </Form>
 
-        <div className="chat__inputIcons">
+        <ChatInputIcons>
           <CardGiftcardIcon fontSize="large" />
           <GifIcon fontSize="large" />
           <EmojiEmotionsIcon fontSize="large" />
-        </div>
-      </div>
-    </div>
+        </ChatInputIcons>
+      </ChatInput>
+    </Container>
   )
 }
-
-export default Chat

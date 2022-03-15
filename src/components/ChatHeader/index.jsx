@@ -1,5 +1,14 @@
 import React from 'react'
-import './ChatHeader.css'
+import {
+  Container,
+  Title,
+  ChatHeaderHash,
+  ChatHeaderLeft,
+  ChatHeaderRight,
+  ChatHeaderSearch,
+  InputSearch,
+} from './styles.js'
+
 import NotificationIcon from '@material-ui/icons/Notifications'
 import EditLocationRoundedIcon from '@material-ui/icons/EditLocationRounded';
 import PeopleAltRoundedIcon from '@material-ui/icons/PeopleAltRounded';
@@ -7,33 +16,30 @@ import SearchRoundedIcon from '@material-ui/icons/SearchRounded';
 import HelpRoundedIcon from '@material-ui/icons/HelpRounded';
 import SendRoundedIcon from '@material-ui/icons/SendRounded';
 
-function ChatHeader({ channelName }) {
+export function ChatHeader({ channelName }) {
   return (
-    <div className="chatHeader">
-      <div className="chatHeader__left">
-        <h3>
-          <span className="chatHeader__hash">
+    <Container className="chatHeader">
+      <ChatHeaderLeft className="chatHeader__left">
+        <Title>
+          <ChatHeaderHash className="chatHeader__hash">
             #
-          </span>
+          </ChatHeaderHash>
           {channelName}
-        </h3>
-      </div>
-      <div className="chatHeader__right">
+        </Title>
+      </ChatHeaderLeft>
+      <ChatHeaderRight className="chatHeader__right">
         <NotificationIcon />
         <EditLocationRoundedIcon />
         <PeopleAltRoundedIcon />
 
-        <div className="chatHeader__search">
-          <input placeholder="Search" />
+        <ChatHeaderSearch className="chatHeader__search">
+          <InputSearch placeholder="Search" />
           <SearchRoundedIcon />
-        </div>
+        </ChatHeaderSearch>
 
         <SendRoundedIcon />
         <HelpRoundedIcon />
-
-      </div>
-    </div>
+      </ChatHeaderRight>
+    </Container>
   )
 }
-
-export default ChatHeader
